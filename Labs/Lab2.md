@@ -9,15 +9,6 @@
  We will now create tables and spatial metadata for CUSTOMERS and WAREHOUSES. 
  We first create the CUSTOMERS and WAREHOUSES tables. Notice that each has a column of type SDO_GEOMETRY to store location. 
 
-
-
-## Step 1: Connecting to Schema
-This section looks at how to connect to schema.
-
-The tasks you will accomplish in this lab are:
-- Create a schema **oeuser** in the container database **SPAGRAPDB**  
-
-
 1. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.  
 
     ````
@@ -72,20 +63,20 @@ The tasks you will accomplish in this lab are:
    
    ````
 
-6. Create  table **CUSTOMERS**  and **WAREHOUSES**
-7. 
+6. Create  table **CUSTOMERS**  and **WAREHOUSES** 
 
     ````
     <copy>
+
     CREATE TABLE CUSTOMERS
-(
-  CUSTOMER_ID NUMBER(6, 0),
-  CUST_FIRST_NAME VARCHAR2(20 CHAR),
-  CUST_LAST_NAME VARCHAR2(20 CHAR), 
-  GENDER VARCHAR2(1 CHAR), 
-  CUST_GEO_LOCATION SDO_GEOMETRY,
-  ACCOUNT_MGR_ID NUMBER(6, 0)
-);
+    ( 
+    CUSTOMER_ID NUMBER(6, 0),
+    CUST_FIRST_NAME VARCHAR2(20 CHAR),
+    CUST_LAST_NAME VARCHAR2(20 CHAR), 
+    GENDER VARCHAR2(1 CHAR), 
+    CUST_GEO_LOCATION SDO_GEOMETRY,
+    ACCOUNT_MGR_ID NUMBER(6, 0)
+    );
   
   CREATE TABLE WAREHOUSES
   (
