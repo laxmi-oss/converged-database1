@@ -11,7 +11,7 @@ Oracle Spatial and Graph is included at no extra cost with all Oracle Database c
 
 ## Workshops
 Click on one of our workshops below to access the content.
-[![](./images/converged-database.png)](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
+[![](./images/Converged_Database.PNG)](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
 
 - [I have a Freetier or Oracle Cloud account](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)
 - [I have an account from SSWorkshop](https://oracle.github.io/learning-library/data-management-library/database/multitenant/ssworkshop/index.html)
