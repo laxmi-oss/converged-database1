@@ -29,7 +29,7 @@ Click here to request your trial account: [https://www.oracle.com/cloud/free](ht
 ## Product Pages
 - [Oracle Database 19c](https://www.oracle.com/database/)
 - [Converged Database vs Specilized Databases](https://www.youtube.com/watch?v=Sbbw2mcrfiA)
-- [Converged Database Architecure] (https://www.youtube.com/watch?v=9d76-LhgMQs)
+- [Converged Database Architecure](https://www.youtube.com/watch?v=9d76-LhgMQs)
 
 
 ### Issues?
