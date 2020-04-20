@@ -58,7 +58,6 @@
     ````
     <copy>
     show user;
-
      </copy>
    
    ````
@@ -67,7 +66,6 @@
 
     ````
     <copy>
-
     CREATE TABLE CUSTOMERS
     ( 
     CUSTOMER_ID NUMBER(6, 0),
@@ -78,14 +76,13 @@
     ACCOUNT_MGR_ID NUMBER(6, 0)
     );
   
-  CREATE TABLE WAREHOUSES
-  (
-   WAREHOUSE_ID    NUMBER(3,0), 
-   WAREHOUSE_NAME        VARCHAR2(35 CHAR), 
-   LOCATION_ID   NUMBER(4,0), 
-   WH_GEO_LOCATION       SDO_GEOMETRY
-  );
-
+    CREATE TABLE WAREHOUSES
+    (
+    WAREHOUSE_ID    NUMBER(3,0), 
+    WAREHOUSE_NAME        VARCHAR2(35 CHAR), 
+    LOCATION_ID   NUMBER(4,0), 
+    WH_GEO_LOCATION       SDO_GEOMETRY
+    );
       </copy>
 
     ````
@@ -96,13 +93,11 @@
 
     ````
     <copy>
-    
-  EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), -'CUSTOMERS', 
-  'CUST_GEO_LOCATION', -  SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), - SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),-  4326);
+    EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), -'CUSTOMERS', 
+    'CUST_GEO_LOCATION', -  SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), - SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),-  4326);
   
-  EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), - 'WAREHOUSES', 
-  'WH_GEO_LOCATION', -  SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), -SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),- 4326);
-
+    EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), - 'WAREHOUSES', 
+    'WH_GEO_LOCATION', -  SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), -SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),- 4326);
     </copy>  
 
     ....
