@@ -112,11 +112,9 @@ Here is a description of the items that were entered:
 8. Drop column from table CUSTOMERS
    
    ````
-    <copy>
-    
+    <copy>    
      alter table CUSTOMERS drop column GENDER;
-     
-     </copy>  
+    </copy>  
 
     ....
 
