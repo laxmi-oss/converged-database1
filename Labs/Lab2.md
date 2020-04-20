@@ -3,11 +3,10 @@
 
 **Create tables and spatial metadata:**
 
- (CUSTOMER Table has 179 rows and WAREHOUSE table has 4 rows)
+  (CUSTOMER Table has 179 rows and WAREHOUSE table has 4 rows)
 
-
- We will now create tables and spatial metadata for CUSTOMERS and WAREHOUSES. 
- We first create the CUSTOMERS and WAREHOUSES tables. Notice that each has a column of type SDO_GEOMETRY to store location. 
+     We will now create tables and spatial metadata for CUSTOMERS and WAREHOUSES. 
+     We first create the CUSTOMERS and WAREHOUSES tables. Notice that each has a column of type SDO_GEOMETRY to store location. 
 
 1. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.  
 

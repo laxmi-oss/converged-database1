@@ -10,7 +10,7 @@ Each table stores location using Oracle's native spatial data type, SDO_GEOMETRY
 
 
 
-**Step 1: Connecting to Schema**
+**Connecting to Schema**
 This section looks at how to connect to schema.
 
 The tasks you will accomplish in this lab are:
@@ -43,17 +43,17 @@ The tasks you will accomplish in this lab are:
       </copy>
     ````
 
-    
-
-3. Create a **oeuser** schema  
-
+3. **Connect to Schema**: This section looks at how to connect to schema. 
+   
+   - Create a schema **oeuser** in the container database **SPAGRAPDB**
+  
     ````
     <copy>
     create user oeuser identified by oeuser container=current;
     </copy>
     ````
     
-4. Grant dba privilage to **oeuser**.  
+1. Grant dba privilage to **oeuser**.  
 
     ````
     <copy>
@@ -61,7 +61,7 @@ The tasks you will accomplish in this lab are:
     </copy>
     ````
    
-5. Connect Container **SPAGRAPDB** as user **oeuser**
+2. Connect Container **SPAGRAPDB** as user **oeuser**
 
     ````
     <copy>
@@ -69,7 +69,7 @@ The tasks you will accomplish in this lab are:
     </copy>
     ````
    
-6. Create TYPE **cust_address_typ**  and **phone_list_typ**
+3. Create TYPE **cust_address_typ**  and **phone_list_typ**
 
     ````
     <copy>
@@ -90,7 +90,7 @@ The tasks you will accomplish in this lab are:
    
    ````
 
-7. Create a table **customers**   
+4. Create a table **customers**   
 
     ````
     <copy>
@@ -115,7 +115,7 @@ The tasks you will accomplish in this lab are:
 
    
 
-8. Script to load customer data in the schema
+5. Script to load customer data in the schema
 
     ````
     <copy>
