@@ -1,7 +1,7 @@
 
 # Oracle Spatial  
 
-## Create tables and spatial metadata: 
+**Create tables and spatial metadata:**
 
  (CUSTOMER Table has 179 rows and WAREHOUSE table has 4 rows)
 
@@ -102,7 +102,7 @@
 
     ....
 
-Here is a description of the items that were entered: 
+**Here is a description of the items that were entered:**
    -	TABLE_NAME: Name of the table which contains the spatial data.
    -	COLUMN_NAME: Name of the SDO_GEOMETRY column which stores the spatial data
    -	MDSYS.SDO_DIM_ARRAY: Constructor which holds the MDSYS.SDO_DIM_ELEMENT object, which in turn stores the extents of 

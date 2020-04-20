@@ -1,10 +1,11 @@
 
 # Oracle Spatial  
 
-## Load data and Create spatial indexes
+**Load data and Create spatial indexes**
 
  First we load CUSTOMERS by copying from the table oeuser.CUSTOMERS.
-# Note that we are using two spatial functions in this 
+
+ **Note that we are using two spatial functions in this **
  step: 1) we use sdo_cs.transform() to convert to our desired coordinate system SRID of 4326
        2) we use sdo_geom.validate_geometry() to insert only valid geometries. 
 
@@ -64,16 +65,6 @@
     Note that you can store a third value also, but for these tutorials, all the customer data is two-dimensional.
  -	NULL, NULL: The last two null values are for storing linestrings, polygons, and geometry collections. 
     For more information on all the fields of the SDO_GEOMETRY object, please refer to the Oracle Spatial Developer's Guide. For this tutorial with point data,  these last two fields should be set to NULL.
-
-4. ## Create spatial indexes
- 
-  ````
-    <copy>
-   CREATE INDEX customers_sidx ON customers(CUST_GEO_LOCATION) indextype is mdsys.spatial_index; 
-   CREATE INDEX warehouses_sidx ON warehouses(WH_GEO_LOCATION) indextype is mdsys.spatial_index;  
-   </copy>
-    ````
-
 
 
 See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).

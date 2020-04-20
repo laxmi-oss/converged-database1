@@ -1,7 +1,7 @@
 
 # Oracle Spatial  
 
-## Scenario
+**Scenario**
 
 My Company has several major warehouses. It needs to locate its customers who are near a given warehouse, to inform them of new advertising promotions. To locate its customers and perform location-based analysis, MyCompany must store location data for both its customers and warehouses. 
 
@@ -10,7 +10,7 @@ Each table stores location using Oracle's native spatial data type, SDO_GEOMETRY
 
 
 
-## Step 1: Connecting to Schema
+**Step 1: Connecting to Schema**
 This section looks at how to connect to schema.
 
 The tasks you will accomplish in this lab are:
