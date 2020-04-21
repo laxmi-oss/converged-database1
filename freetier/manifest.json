@@ -22,7 +22,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/master/Labs/Lab2.md"
+            "filename": "../Labs/Lab2.md"
         },
         {         
             "title": "Lab 3: Load Data",
@@ -30,7 +30,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/blob/master/Labs/Lab3.md"
+            "filename": "../Labs/Lab3.md"
         },
         {         
             "title": "Lab 4: Create Spatial Indexes",
@@ -38,7 +38,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/master/Labs/Lab4.md"
+            "filename": "../Labs/Lab4.md"
         },
         {         
             "title": "Lab 5: Perform location-based queries",
@@ -46,7 +46,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/master/Labs/Lab5.md"
+            "filename": "../Labs/Lab5.md"
         }
     ]
 }
