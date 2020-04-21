@@ -14,7 +14,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/master/Labs/Lab1.md"
+            "filename": "../Labs/Lab1.md"
         },
         {         
             "title": "Lab 2: Create Tables",
