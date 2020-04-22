@@ -3,14 +3,12 @@
 
 **Scenario**
 
-My Company has several major warehouses. It needs to locate its customers who are near a given warehouse, to inform them of new advertising promotions. To locate its customers and perform location-based analysis, MyCompany must store location data for both its customers and warehouses. 
-
-This tutorial uses CUSTOMERS and WAREHOUSES tables. 
-Each table stores location using Oracle's native spatial data type, SDO_GEOMETRY. A location can be stored as a point in an SDO_GEOMETRY column of a table. The customer's location is associated with longitude and latitude values on the Earth's surface—for example, -63.13631, 52.485426.
-
+My Company has several major warehouses. It needs to locate its customers who are near a given warehouse, to inform them of new advertising promotions. To locate its customers and perform location-based analysis, My Company must store location data for both its customers and warehouses.
+This tutorial uses CUSTOMERS and WAREHOUSES tables. Each table stores location using Oracle's native spatial data type, SDO_GEOMETRY. A location can be stored as a point in an SDO_GEOMETRY column of a table. The customer's location is associated with longitude and latitude values on the Earth's surface—for example, -63.13631, 52.485426.
 
 
 **Connecting to Schema**
+
 This section looks at how to connect to schema.
 
 The tasks you will accomplish in this lab are:
