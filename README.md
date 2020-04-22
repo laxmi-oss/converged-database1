@@ -1,5 +1,7 @@
 # Oracle Converged Database Github
 
+Introduction 
+
 Unlike the Oracle Database, limited function databases lead developers to write a lot more code and makes IT infrastructure overly complex, brittle, and fragile. 
 As businesses reach for digital transformation, they are finding that integrating all the critical functionality they need — IoT, machine learning, blockchain, and more — via traditional methods isn’t working. What they need is a database that provides seamless convergence and integration of data types and workloads, availability, security, performance plus support for the latest development methodologies like SaaS, events, and CI/CD. This integration is critical to leveraging these technologies to transform the business. 
 In this talk we'll introduce the concept behind such “data-driven applications” to help you open up conversations with your database customer about how to get the most from their Oracle Database when developing applications.
