@@ -1,29 +1,23 @@
 
 # Oracle Spatial  
 
-**Scenario**
+**Create tables and spatial metadata:**
+ 
 
-My Company has several major warehouses. It needs to locate its customers who are near a given warehouse, to inform them of new advertising promotions. To locate its customers and perform location-based analysis, My Company must store location data for both its customers and warehouses.
-This tutorial uses CUSTOMERS and WAREHOUSES tables. Each table stores location using Oracle's native spatial data type, SDO_GEOMETRY. A location can be stored as a point in an SDO_GEOMETRY column of a table. The customer's location is associated with longitude and latitude values on the Earth's surface—for example, -63.13631, 52.485426.
+## Steps ##
 
-
-**Connecting to Schema**
-
-This section looks at how to connect to schema.
-
-The tasks you will accomplish in this lab are:
-- Create a schema **oeuser** in the container database **SPAGRAPDB**  
-
-1. Connect to **SPAGRAPDB**  
-
-    ````
+1. Login to the PDB:
+   
+   ````
     <copy>
-    alter session set container=SPAGRAPDB;
+   ps -ef|grep|pmon
+   . oraenv
+   sqlplus ' / as sysdba'
+   alter session set container=SPAGRAPDB;
     </copy>
     ````
 
 2. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.  
-
     ````
     <copy>
     select
@@ -41,86 +35,79 @@ The tasks you will accomplish in this lab are:
       </copy>
     ````
 
-3. **Connect to Schema**: This section looks at how to connect to schema. 
-   
-   - Create a schema **oeuser** in the container database **SPAGRAPDB**
-  
+    
+3. Create a  user **app_test**
+
     ````
     <copy>
-    create user oeuser identified by oeuser container=current;
+    create user app_test identified by app_test container=current;
     </copy>
     ````
     
-1. Grant dba privilage to **oeuser**.  
+4. Grant dba privilage to **app_test** user.
 
     ````
     <copy>
-    grant dba to oeuser;
+    grant dba to app_test;
     </copy>
     ````
    
-2. Connect Container **SPAGRAPDB** as user **oeuser**
+5. Connect Container **SPAGRAPDB** as user **app_test**
 
     ````
     <copy>
-    sqlplus oeuser/oeuser@SPAGRAPDB
+    sqlplus app_test/app@SPAGRAPDB
     </copy>
     ````
    
-3. Create TYPE **cust_address_typ**  and **phone_list_typ**
+6. Create  table **CUSTOMERS**  and **WAREHOUSES** 
 
     ````
     <copy>
-    CREATE TYPE cust_address_typ
-    AS OBJECT
-    ( street_address     VARCHAR2(40)
-    , postal_code        VARCHAR2(10)
-    , city               VARCHAR2(30)
-    , state_province     VARCHAR2(10)
-    , country_id         CHAR(2)
+    CREATE TABLE CUSTOMERS
+    ( 
+    CUSTOMER_ID NUMBER(6, 0),
+    CUST_FIRST_NAME VARCHAR2(20 CHAR),
+    CUST_LAST_NAME VARCHAR2(20 CHAR), 
+    GENDER VARCHAR2(1 CHAR), 
+    CUST_GEO_LOCATION SDO_GEOMETRY,
+    ACCOUNT_MGR_ID NUMBER(6, 0)
     );
-    / 
+  
+    CREATE TABLE WAREHOUSES
+    (
+    WAREHOUSE_ID    NUMBER(3,0), 
+    WAREHOUSE_NAME        VARCHAR2(35 CHAR), 
+    LOCATION_ID   NUMBER(4,0), 
+    WH_GEO_LOCATION       SDO_GEOMETRY
+    );
+      </copy>
 
-   CREATE TYPE phone_list_typ
-    AS VARRAY(5) OF VARCHAR2(25);
-    /
-   </copy>
-   
-   ````
+    ````
 
-4. Create a table **customers**   
+  
+8.    Next we add Spatial metadata for the CUSTOMERS and WAREHOUSES tables
+      to the **USER-SDO-GEOM-METADATA** view. Each **SDO-GEOMETRY** column is registered
+      with a row in   **USER-SDO-GEOM-METADATA**.
 
     ````
     <copy>
-    CREATE TABLE customers
-    ( customer_id        NUMBER(6),
-    cust_first_name    VARCHAR2(20) CONSTRAINT cust_fname_nn NOT NULL , 
-    cust_last_name     VARCHAR2(20) CONSTRAINT cust_lname_nn NOT NULL,
-    cust_address cust_address_typ, 
-    phone_numbers      phone_list_typ, 
-    nls_language       VARCHAR2(3) , 
-    nls_territory      VARCHAR2(30), 
-    credit_limit       NUMBER(9,2), 
-    cust_email         VARCHAR2(40),
-    account_mgr_id     NUMBER(6) ,
-    cust_geo_location  MDSYS.SDO_GEOMETRY , 
-    CONSTRAINT         customer_credit_limit_max  CHECK (credit_limit <= 5000) ,
-    CONSTRAINT         customer_id_min  CHECK (customer_id > 0)
-    ) ;
-    </copy>
+     EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), -
+    'CUSTOMERS', 'CUST_GEO_LOCATION', -  SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), - SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),-  4326);
 
-    ````
-
-   
-
-5. Script to load customer data in the schema
-
-    ````
-    <copy>
+     EXECUTE SDO_UTIL.INSERT_SDO_GEOM_METADATA (sys_context('userenv','current_user'), -
+     'WAREHOUSES', 'WH_GEO_LOCATION', - SDO_DIM_ARRAY(SDO_DIM_ELEMENT('X',-180, 180, 0.05), - SDO_DIM_ELEMENT('Y', -90, 90, 0.05)),-  4326);
+      </copy>
     
-    @oe_p_cus.sql
+       ````
 
-    </copy>  
+     
+     **Here is a description of the items that were entered:**
 
+     -	TABLE-NAME: Name of the table which contains the spatial data.
+     -	COLUMN-NAME: Name of the SDO-GEOMETRY column which stores the spatial data.
+     -	 MDSYS.SDO-DIM-ARRAY: Constructor which holds the MDSYS.SDO-DIM-ELEMENT object,which in turn stores the extents of the spatial data  in each dimension (-180.0, 180.0), and a tolerance value (0.05). The tolerance is a round-off error value used by Oracle Spatial, and is in meters for longitude and latitude data. In this example, the tolerance is 5 mm.
+     -	4326: Spatial reference system id (SRID): a foreign key to an Oracle dictionary table  (MDSYS.CS-SRS) tha  contains all the     supported coordinate systems. It is important to associate your customer's location to a coordinate system. In this example, 4326    corresponds to "Longitude / Latitude (WGS 84).".
+ 
 
 See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).
