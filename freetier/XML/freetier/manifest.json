@@ -1,0 +1,60 @@
+{
+    "tutorials": [
+        {         
+            "title": "Introduction and Overview",
+            "description": "Introduction to XML Workshop",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../intro/intro.md"
+        },
+        {         
+            "title": "Lab 1",
+            "description": "Create Table and Load Data",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab1.md"
+        },
+        {         
+            "title": "Lab 2 ",
+            "description": "Specific Geo Location",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab2.md"
+        },
+        {         
+            "title": "Lab 3  ",
+            "description": "Specific UPC ",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab3.md"
+        },
+        {         
+            "title": "Lab 4  ",
+            "description": "Use case c- Purchased a Specific Products ",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab4.md"
+        },
+        {         
+            "title": "Lab 5 ",
+            "description": "Total Orders Done By Customers",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab5.md"
+        },
+        {         
+            "title": "Lab 6 ",
+            "description": "Perform location-based queries",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Lab6.md"
+        }
+                 ]
+}
