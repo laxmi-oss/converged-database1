@@ -2,51 +2,51 @@
     "tutorials": [
         {         
             "title": "Introduction and Overview",
-            "description": "Introduction to Converged Database Workshop",
+            "description": "Introduction to Multitenant Workshop",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
             "filename": "../intro/intro.md"
         },
         {         
-            "title": "Lab 1: Connect to Schema",
-            "description": "Connect to Schema",
+            "title": "Lab 1: Login to Oracle Cloud",
+            "description": "Login to Oracle Cloud",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/tree/master/Labs/Lab1.md"
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-ssworkshop.md"
         },
         {         
-            "title": "Lab 2: Create Tables",
-            "description": "Create Tables",
+            "title": "Lab 2: Generate SSH Key",
+            "description": "Generate SSH Key",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/tree/master/Labs/Lab2.md"
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
         },
         {         
-            "title": "Lab 3: Load Data",
-            "description": "Load Data",
+            "title": "Lab 3: Workshop Setup",
+            "description": "Setup Multitenant Workshop in Self Service Workshop",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/tree/master/Labs/Lab3.md"
+            "filename": "./../setup/ssworkshop-setup.md"
         },
         {         
-            "title": "Lab 4: Create Spatial Indexes",
-            "description": "Create Spatial Indexes",
+            "title": "Lab 4: Multitenant Basics",
+            "description": "Clone, Plug and Drop Pluggable Databases",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/tree/master/Labs/Lab4.md"
+            "filename": "./../clone-plug-drop/clone-plug-drop.md"
         },
         {         
-            "title": "Lab 5: Perform location-based queries",
-            "description": "Perform location-based queries",
+            "title": "Lab 5: Application Containers",
+            "description": "Using Application Containers with Multitenant",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "https://github.com/laxmi-oss/converged-database1/tree/master/Labs/Lab5.md"
+            "filename": "./../app-containers/app-containers.md"
         }
     ]
 }
