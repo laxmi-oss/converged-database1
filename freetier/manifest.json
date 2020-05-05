@@ -9,44 +9,13 @@
             "filename": "../intro/intro.md"
         },
         {         
-            "title": "Lab 1: Connect to Schema",
+            "title": "Env Setup",
             "description": "Connect to Schema",
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
             "filename": "../Labs/Lab1.md"
-        },
-        {         
-            "title": "Lab 2: Create Tables",
-            "description": "Create Tables",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "../Labs/Lab2.md"
-        },
-        {         
-            "title": "Lab 3: Load Data",
-            "description": "Load Data",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "../Labs/Lab3.md"
-        },
-        {         
-            "title": "Lab 4: Create Spatial Indexes",
-            "description": "Create Spatial Indexes",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "../Labs/Lab4.md"
-        },
-        {         
-            "title": "Lab 5: Perform location-based queries",
-            "description": "Perform location-based queries",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "../Labs/Lab5.md"
         }
-    ]
+        
+            ]
 }
