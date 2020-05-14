@@ -38,15 +38,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "./../clone-plug-drop/clone-plug-drop.md"
-        },
-        {         
-            "title": "Lab 5: Application Containers",
-            "description": "Using Application Containers with Multitenant",
-            "partnumber": "Ennnnn_01",
-            "publisheddate": "03/10/2020",
-            "contentid": "12nnnn",
-            "filename": "./../app-containers/app-containers.md"
+            "filename": "./../lab1/setup.md"
         }
     ]
 }
