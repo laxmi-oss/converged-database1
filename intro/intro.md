@@ -35,8 +35,6 @@ All of these capabilities create better and informed decisions by increasing the
   [](youtube:9d76-LhgMQs)
   [](youtube:Sbbw2mcrfiA)
 
-Click on one of our workshops below to access the content. 
-[![](./images/converged-database.png)](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
 
 - [I have a Freetier or Oracle Cloud account](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)
 - [I have an account from SSWorkshop](https://oracle.github.io/learning-library/data-management-library/database/multitenant/ssworkshop/index.html)
@@ -50,10 +48,14 @@ If you don't have an Oracle Cloud account then you can quickly and easily sign u
 
 Click here to request your trial account: [https://www.oracle.com/cloud/free](https://www.oracle.com/cloud/free)
 
-## Data types
-- [JSON](http://127.0.0.1:5500/freetier/JSON/freetier/index.html?lab=introduction-overview)
-- [XML](http://127.0.0.1:5500/freetier/XML/freetier/index.html?lab=introduction-overview)
-- [SPATIAL](http://127.0.0.1:5500/freetier/SPATIAL/freetier/index.html?lab=introduction-overview)
+## Workshops
+- [JSON](https://laxmi-oss.github.io/converged-database/workshops/json-freetier/)
+- [XML](https://laxmi-oss.github.io/converged-database/workshops/xml-freetier/)
+- [SPATIAL](https://laxmi-oss.github.io/converged-database/workshops/spatial-freetier/)
+- [Graph](https://kanikakasharma.github.io/converged-database/workshop/graph-freetier/)
+- [BigDataSQL(HDFS)](https://kanikakasharma.github.io/converged-database/workshop/bigdatahdfs-freetier/)
+- [BigDataSQL(HIVE)](https://kanikakasharma.github.io/converged-database/workshop/bigdatahive-freetier/)
+
 
 
 ## Product Pages
@@ -63,9 +65,8 @@ Click here to request your trial account: [https://www.oracle.com/cloud/free](ht
 
 ## Acknowledgements
 
-- **Authors/Contributors** - Laxmi S A, Kanika Sharma
+- **Authors/Contributors** - Brian Hengen,Balasubramanian Ramamoorthy,Arvind Bhope.
 
 ### Issues?
 Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
-
 
